@@ -251,6 +251,13 @@ ul
 {
     color: #ec1839;
 }
+.aside .nav li a:hover
+{
+    transform: scale(1.1);
+    color: #ec1839; /* Accent color on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+    
+}
 .aside .nav li a i
 {
     margin-right: 15px;
@@ -634,3 +641,113 @@ h3.my-profession
         display: none;
     }
 }
+/* LinkedIn and GitHub icon styling */
+.contact-info-item .icon .fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+.contact-info-item .icon .fa-github {
+    color: #333; /* GitHub dark grey */
+}
+
+/* Hover effect for LinkedIn and GitHub links */
+.contact-info-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-info-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin: 15px 0 5px;
+}
+
+.contact-info-item p a {
+    color: var(--text-black-700);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.contact-info-item p a:hover {
+    color: #ec1839; /* Accent color on hover */
+}
+/* LinkedIn and GitHub icon styling */
+.contact-info-item .icon .fa-linkedin,
+.contact-info-item .icon .fa-github {
+    color: #ec1839; /* Consistent icon color */
+    font-size: 30px;
+}
+
+/* Hover effect for LinkedIn and GitHub links */
+.contact-info-item p a {
+    color: var(--text-black-700); /* Default text color */
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.contact-info-item p a:hover {
+    color: #ec1839; /* Accent color on hover */
+    text-decoration: underline;
+}
+.projects {
+    background: var(--bg-black-900);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project-icon {
+    background: var(--bg-black-100);
+    border-radius: 8px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-icon i {
+    font-size: 50px;
+    color: #ec1839;
+}
+
+.project-icon:hover {
+    transform: scale(1.1);
+    color: #ec1839; /* Accent color on hover */
+}
+.section-title {
+    display: block;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-align: left; /* Aligns the title to the left */
+    position: relative;
+}
+
+.project-icon i {
+    font-size: 50px; /* Adjust the icon size */
+    color: #ec1839; /* Default icon color */
+}
+
+.project-icon:hover {
+    transform: scale(1.1);
+    color: #ec1839; /* Accent color on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.project-icon h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--text-black-900);
+    font-weight: 600;
+}
+
+
