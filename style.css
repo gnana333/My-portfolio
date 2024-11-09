@@ -147,7 +147,6 @@ ul
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
-
 }
 .aside .logo a:hover
 {
@@ -324,6 +323,9 @@ h3.my-profession
     right: 20px;
     bottom: -40px;
 }
+.home .home-img:hover{
+    transform: scale(1.1);
+}
 .home .home-img img
 {
     margin: auto;
@@ -395,18 +397,24 @@ h3.my-profession
 }
 .about .about-content .skills
 {
-    flex: 0 0 40%;
-    max-width: 40%;
-    margin-top: 40px;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
-.about .about-content .skills .skill-item
+.about .about-content .skills .skill-it .skill-item
 {
     flex: 0 0 100%;
     max-width: 100%;
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
 }
 .about .about-content .skills .skill-item h5
 {
     line-height: 40px;
+    margin-top: 20px;
     font-weight: 600;
     font-size: 16px;
     color: var(--text-black-900);
@@ -420,6 +428,7 @@ h3.my-profession
     width: 100%;
     position: relative;
 }
+
 .about .about-content .skills .skill-item
  {
     margin-bottom: 25px;
@@ -443,7 +452,7 @@ h3.my-profession
     line-height: 40px;
 }
 .about .about-content .education,
-.about .about-content .experience
+.about .about-content .skills
 {
     flex: 0 0 50%;
     max-width: 50%;
