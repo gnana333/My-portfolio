@@ -149,6 +149,11 @@ ul
     text-transform: capitalize;
 
 }
+.aside .logo a:hover
+{
+    transform: scale(1.1);
+    color: #ec1839; /* Accent color on hover */
+}
 .aside .logo a
 {
     color: var(--text-black-900);
