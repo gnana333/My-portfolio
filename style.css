@@ -15,6 +15,10 @@ body.dark
     --text-black-900:#ffffff;
     --text-black-700:#e9e9e9;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 body
 {
     line-height: 1.5;
@@ -674,7 +678,20 @@ h3.my-profession
     }
     .section
     {
+        position: relative;
         left: 0;
+        opacity: 1;
+        z-index: 0;
+        animation: none;
+    }
+    .section.back-section
+    {
+        z-index: 0;
+    }
+    .section.active
+    {
+        z-index: 0;
+        animation: none;
     }
     .section.open
     {
@@ -714,18 +731,18 @@ h3.my-profession
         display: none;
     }
     .skills-grid {
-        gap: 15px;
+        gap: 12px;
         justify-content: center;
     }
     .skill-icon {
-        width: 90px;
-        padding: 12px;
+        width: 80px;
+        padding: 10px;
     }
     .skill-icon i {
-        font-size: 30px;
+        font-size: 28px;
     }
     .skill-icon h5 {
-        font-size: 18px;
+        font-size: 11px;
     }
 }
 @media (max-width:767px)
@@ -761,6 +778,20 @@ h3.my-profession
     .project-icon h4
     {
         font-size: 14px;
+    }
+    .skills-grid {
+        gap: 10px;
+        padding: 0 5px;
+    }
+    .skill-icon {
+        width: 70px;
+        padding: 8px;
+    }
+    .skill-icon i {
+        font-size: 24px;
+    }
+    .skill-icon h5 {
+        font-size: 10px;
     }
 }
 @media (max-width:575px)
@@ -831,6 +862,22 @@ h3.my-profession
     .style-switcher.open
     {
         transform: translateX(-15px);
+    }
+    .skills-grid {
+        gap: 8px;
+        padding: 0;
+    }
+    .skill-icon {
+        width: 65px;
+        padding: 6px;
+    }
+    .skill-icon i {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    .skill-icon h5 {
+        font-size: 9px;
+        line-height: 1.2;
     }
 }
 /* LinkedIn and GitHub icon styling */

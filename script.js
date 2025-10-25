@@ -64,8 +64,18 @@ const nav = document.querySelector(".nav"),
 for(let i=0; i<totalNavList; i++)
 {
     const a = navList[i].querySelector("a");
-    a.addEventListener("click", function()
+    a.addEventListener("click", function(e)
     {
+        // On mobile, use smooth scroll instead of section switching
+        if(window.innerWidth < 1200)
+        {
+            asideSectionTogglerBtn();
+            // Let the default anchor behavior work (smooth scroll)
+            return;
+        }
+        
+        // Desktop behavior - section switching
+        e.preventDefault();
         removeBackSection();
         for(let j=0; j<totalNavList; j++)
         {
@@ -77,10 +87,6 @@ for(let i=0; i<totalNavList; i++)
         }
         this.classList.add("active");
         showSection(this);
-        if(window.innerWidth < 1200)
-        {
-            asideSectionTogglerBtn();
-        }
     })
 }
 
@@ -120,13 +126,25 @@ function updateNav(element)
     }
 }
 
-document.querySelector(".hire-me").addEventListener("click", function()
-{
-    const sectionIndex = this.getAttribute("data-section-index");
-    showSection(this);
-    updateNav(this);
-    removeBackSection();
-    addBackSection(sectionIndex);
+const hireMeButtons = document.querySelectorAll(".hire-me");
+hireMeButtons.forEach(button => {
+    button.addEventListener("click", function(e)
+    {
+        // On mobile, use smooth scroll instead of section switching
+        if(window.innerWidth < 1200)
+        {
+            // Let the default anchor behavior work (smooth scroll)
+            return;
+        }
+        
+        // Desktop behavior - section switching
+        e.preventDefault();
+        const sectionIndex = this.getAttribute("data-section-index");
+        showSection(this);
+        updateNav(this);
+        removeBackSection();
+        addBackSection(sectionIndex);
+    })
 })
 
 const navTogglerBtn = document.querySelector(".nav-toggler"),
